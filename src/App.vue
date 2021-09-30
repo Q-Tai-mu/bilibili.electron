@@ -1,31 +1,42 @@
 <template>
   <div id="app">
-    <TitleBlock />
-    <div id="mainlogo">
-      <img alt="Vue logo" src="./assets/Logo/StoreLogo.scale-200.png" />
-      <HelloWorld msg=" bilibili-electron Dev version App " />
-    </div>
+    <transition name="fade">
+      <router-view></router-view>
+    </transition>
+    <!-- <router-view></router-view> -->
   </div>
-
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-import TitleBlock from "./components/TitleBlock.vue";
-
 export default {
   name: "App",
-  components: {
-    HelloWorld,
-    TitleBlock,
+  components: {},
+  data() {
+    return {
+      timer: "",
+    };
+  },
+  methods: {
+    jumpPage() {
+      this.$router.push({ path: "/main" });
+    },
+  },
+  mounted() {
+    //窗口创建时
+    this.timer = setTimeout(this.jumpPage, 3000);
+  },
+  beforeDestroy() {
+    clearTimeout(this.timer);
   },
 };
 </script>
 
 <style>
-html,body #app {
+html,
+body #app {
   height: 100%;
   border-radius: 10px;
+  overflow: hidden;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -37,12 +48,17 @@ html,body #app {
   margin: 0px;
   width: 100%;
   height: 100%;
- 
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow: hidden;
   /* margin: 1px; */
   /* margin-top: 60px; */
   background-color: #515c6b;
   opacity: 1;
   border-radius: 10px;
+
+   
 }
 #mainlogo {
   text-align: center; /*让div内部文字居中*/
@@ -56,5 +72,12 @@ html,body #app {
   left: 0;
   right: 0;
   bottom: 0;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>

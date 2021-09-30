@@ -1,11 +1,14 @@
 <template>
-  <div class="titleBlock">
+  <div class="titleBlock" :style="backColor">
     <div class="titleName">
       {{ titleName }}
     </div>
     <div id="Ternarylinkage">
       <div id="Binarylinkage">
-        <div id="linkage1" @click="minWindow" class="ech-rotate15">
+        <div v-if="call1 === 'on' " id="linkage1" @click="closeWindow" class="ech-rotate15">
+          <img id="linkage1Image" src="" />
+        </div>
+        <div v-else-if="call1 === 'off' " id="linkage1" style="background-color: #b5c5c4;" @click="minWindow" class="ech-rotate15">
           <img id="linkage1Image" src="" />
         </div>
       </div>
@@ -15,7 +18,10 @@
         </div>
       </div>
       <div id="Unitlinkage">
-        <div id="linkage3" @click="closeWindow" class="ech-rotate15">
+        <div v-if="call2 === 'on' " id="linkage3"   @click="minWindow" class="ech-rotate15">
+          <img src="" id="linkage3Image" />
+        </div>
+        <div v-else-if="call2 === 'off' " id="linkage3" style="background-color: #ff6659;"   @click="closeWindow" class="ech-rotate15">
           <img src="" id="linkage3Image" />
         </div>
       </div>
@@ -28,9 +34,14 @@
 const { ipcRenderer } = require('electron')
 export default {
   name: "titleBlock",
+  props: {
+    backColor: String,
+    call1: String,
+    call2:String
+  },
   data() {
     return {
-      titleName: ""
+      titleName: "",
     };
   },
   methods: {
@@ -51,7 +62,7 @@ export default {
 <style>
 .titleBlock {
   height: 30px;
-  background-color: #515c6b;
+  /* background-color: #515c6b; */
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   /* -webkit-app-region: drag; */
@@ -141,6 +152,6 @@ export default {
 .titleName {
   float: left;
   margin-top: 6px;
-  margin-left: 11px;
+  margin-left: 0px;
 }
 </style>
