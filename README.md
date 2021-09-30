@@ -6,7 +6,7 @@
 <div align="center">
 
 
-# 哔哩
+# bilibili.electron
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/Q-Tai-mu/bilibili.electron)](https://github.com/Richasy/Bili.Uwp/releases) ![GitHub Release Date](https://img.shields.io/github/release-date/Q-Tai-mu/bilibili.electron) ![GitHub All Releases](https://img.shields.io/github/downloads/Q-Tai-mu/bilibili.electron/total) ![GitHub stars](https://img.shields.io/github/stars/Q-Tai-mu/bilibili.electron?style=flat) ![GitHub forks](https://img.shields.io/github/forks/Q-Tai-mu/bilibili.electron)
 
