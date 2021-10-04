@@ -3,68 +3,126 @@
  * @Description: 
  * @Author: MArio
  * @Date: 2021-10-03 22:50:34
- * @LastEditTime: 2021-10-04 14:10:15
+ * @LastEditTime: 2021-10-04 21:07:07
  * @LastEditors: MArio
 -->
 <template>
   <div id="recommendations">
     <div class="Searchbox">
       <!-- 搜索条 -->
+      <div class="zuijinSo">
+        <div class="tubiaoS"></div>
+        <div class="tubiaoK"></div>
+      </div>
+      <div class="shuaXin" :style="backColor" @mousemove="onmouseoverSha" @mouseout="onmouseoutSha">SH</div>
     </div>
     <div class="SelectCardQu">
       <!-- 最近游览 -->
       <div class="RecentTour">
         最近游览
       </div>
-      <div style="width:100%;padding-left:55px;padding-right:55px;">
-        <div>
+      <div style="width:100%;padding-left:45px;padding-right:55px;">
+        <div style="" class="csro">
+          <table>
+            <tr>
+              <td>
+                <div class="card loading">
+                  <div class="image"></div>
+                  <div class="content">
+                    <h4></h4>
+                    <div class="description"></div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="card loading">
+                  <div class="image"></div>
+                  <div class="content">
+                    <h4></h4>
+                    <div class="description"></div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="card loading">
+                  <div class="image"></div>
+                  <div class="content">
+                    <h4></h4>
+                    <div class="description"></div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="card loading">
+                  <div class="image"></div>
+                  <div class="content">
+                    <h4></h4>
+                    <div class="description"></div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="card loading">
+                  <div class="image"></div>
+                  <div class="content">
+                    <h4></h4>
+                    <div class="description"></div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="card loading">
+                  <div class="image"></div>
+                  <div class="content">
+                    <h4></h4>
+                    <div class="description"></div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="card loading">
+                  <div class="image"></div>
+                  <div class="content">
+                    <h4></h4>
+                    <div class="description"></div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="card loading">
+                  <div class="image"></div>
+                  <div class="content">
+                    <h4></h4>
+                    <div class="description"></div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="card loading">
+                  <div class="image"></div>
+                  <div class="content">
+                    <h4></h4>
+                    <div class="description"></div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="card loading">
+                  <div class="image"></div>
+                  <div class="content">
+                    <h4></h4>
+                    <div class="description"></div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+
           <!-- 频道卡 -->
-          <div class="card loading">
-            <div class="image"></div>
-            <div class="content">
-              <h4></h4>
-              <div class="description"></div>
-            </div>
-          </div>
-          <div class="card loading">
-            <div class="image"></div>
-            <div class="content">
-              <h4></h4>
-              <div class="description"></div>
-            </div>
-          </div>
-          <div class="card loading">
-            <div class="image"></div>
-            <div class="content">
-              <h4></h4>
-              <div class="description"></div>
-            </div>
-          </div>
-          <div class="card loading">
-            <div class="image"></div>
-            <div class="content">
-              <h4></h4>
-              <div class="description"></div>
-            </div>
-          </div>
-          <div class="card loading">
-            <div class="image"></div>
-            <div class="content">
-              <h4></h4>
-              <div class="description"></div>
-            </div>
-          </div>
-          <div class="card loading">
-            <div class="image"></div>
-            <div class="content">
-              <h4></h4>
-              <div class="description"></div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
-    <div>
+    <div style="margin-top:20px">
       <!-- 推荐视频 -->
       <div style="height:33px;">
         <div class="tuijian">推荐视频</div>
@@ -168,6 +226,246 @@
               </div>
             </div>
           </tr>
+          <tr>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+          </tr>
+          <tr>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+          </tr>
+          <tr>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+          </tr>
+          <tr>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+          </tr>
+          <tr>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+          </tr>
+          <tr>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+          </tr>
+          <tr>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+          </tr>
+          <tr>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+            <div class="card2 loading2">
+              <div class="image2"></div>
+              <div class="content2">
+                <h4></h4>
+                <div class="description2"></div>
+              </div>
+            </div>
+          </tr>
         </table>
       </div>
     </div>
@@ -178,7 +476,17 @@
 export default {
   name: "recommendations",
   data() {
-    return {};
+    return {
+      backColor: "",
+    };
+  },
+  methods: {
+    onmouseoverSha() {
+      this.backColor = " background-color: #fff;";
+    },
+    onmouseoutSha() {
+      this.backColor = " background-color: #dee5eb;";
+    },
   },
 };
 </script>
@@ -197,7 +505,7 @@ export default {
   text-align: left;
   font-family: cursive;
   font-size: 25px;
-  padding-left: 65px;
+  padding-left: 45px;
   padding-top: 5px;
 }
 .SelectCardQu {
@@ -217,12 +525,12 @@ export default {
 .card {
   margin: 10px;
   height: 135px;
-  width: 130px;
+  width: 115px;
   background-color: #fff;
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12);
-  float: left;
+  /* float: left; */
 }
 .card2 {
   margin: 10px;
@@ -340,11 +648,34 @@ h4 {
   animation-delay: 0.06s;
 }
 
+.csro {
+  overflow-x: scroll;
+}
+.csro::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 1px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 11px;
+}
+
+.csro::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 5px rgba(235, 238, 240, 0.2);
+  background: #ebeef0;
+}
+
+.csro::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  -webkit-box-shadow: inset 0 0 5px rgba(235, 238, 240, 0.2);
+  border-radius: 10px;
+  background: #f1f6fa;
+}
+
 .scro {
   height: 430px;
   overflow-y: scroll;
 }
-
 .scro::-webkit-scrollbar {
   /*滚动条整体样式*/
   width: 8px;
@@ -386,5 +717,42 @@ h4 {
   height: 30px;
   text-align: center;
   padding-top: 5px;
+}
+.zuijinSo {
+  float: left;
+  margin-left: 45px;
+  width: 345px;
+  height: 40px;
+  border-radius: 45px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.shuaXin {
+  float: right;
+  margin-right: 45px;
+  margin-top: 5px;
+  background-color: #dee5eb;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 45px;
+  cursor:default;
+}
+.tubiaoS {
+  height: 32px;
+  width: 32px;
+  background-color: rgba(245, 243, 243, 0.795);
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 32px;
+  float: left;
+}
+.tubiaoK {
+  float: left;
+  width: 250px;
+  height: 32px;
+  background-color: rgb(245, 243, 243);
+  margin-top: 5px;
+  margin-left: 5px;
 }
 </style>
