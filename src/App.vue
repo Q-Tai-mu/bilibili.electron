@@ -1,3 +1,11 @@
+<!--
+ * @公司名: 北京雨花石云计算
+ * @Description: 
+ * @Author: MArio
+ * @Date: 2021-09-24 22:51:34
+ * @LastEditTime: 2021-10-04 14:33:24
+ * @LastEditors: MArio
+-->
 <template>
   <div id="app">
     <transition name="fade">
@@ -48,7 +56,7 @@ body #app {
   margin: 0px;
   width: 100%;
   height: 100%;
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   align-items: flex-start;
   overflow: hidden;
