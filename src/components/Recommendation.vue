@@ -3,18 +3,25 @@
  * @Description: 
  * @Author: MArio
  * @Date: 2021-10-03 22:50:34
- * @LastEditTime: 2021-10-04 21:07:07
+ * @LastEditTime: 2021-10-05 16:43:50
  * @LastEditors: MArio
 -->
 <template>
   <div id="recommendations">
     <div class="Searchbox">
       <!-- 搜索条 -->
-      <div class="zuijinSo">
+      <div class="zuijinSo loading">
         <div class="tubiaoS"></div>
         <div class="tubiaoK"></div>
       </div>
-      <div class="shuaXin" :style="backColor" @mousemove="onmouseoverSha" @mouseout="onmouseoutSha">SH</div>
+      <div
+        class="shuaXin"
+        :style="backColor"
+        @mousemove="onmouseoverSha"
+        @mouseout="onmouseoutSha"
+      >
+        SH
+      </div>
     </div>
     <div class="SelectCardQu">
       <!-- 最近游览 -->
@@ -126,8 +133,8 @@
       <!-- 推荐视频 -->
       <div style="height:33px;">
         <div class="tuijian">推荐视频</div>
-        <div class="huanyihuan">
-          <div class="fankua">
+        <div class="huanyihuan2">
+          <div class="fankua2">
             换一换
           </div>
         </div>
@@ -137,334 +144,238 @@
         <!-- 卡 -->
         <table>
           <tr>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            </td>
+
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            </td>
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            </td>
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
+            </td>
           </tr>
           <tr>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            </td>
+
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            </td>
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            </td>
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
+            </td>
           </tr>
           <tr>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            </td>
+
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            </td>
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            </td>
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
+            </td>
           </tr>
           <tr>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            </td>
+
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            </td>
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            </td>
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
+            </td>
           </tr>
           <tr>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            </td>
+
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            </td>
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            </td>
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
+            </td>
           </tr>
           <tr>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            </td>
+
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            </td>
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
+            </td>
+            <td>
+              <div class="cardH loadingH">
+                <div class="imageH"></div>
+                <div class="contentH">
+                  <h4></h4>
+                  <div class="descriptionH"></div>
+                </div>
               </div>
-            </div>
-          </tr>
-          <tr>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
-              </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
-              </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
-              </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
-              </div>
-            </div>
-          </tr>
-          <tr>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
-              </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
-              </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
-              </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
-              </div>
-            </div>
-          </tr>
-          <tr>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
-              </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
-              </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
-              </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
-              </div>
-            </div>
-          </tr>
-          <tr>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
-              </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
-              </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
-              </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
-              </div>
-            </div>
-          </tr>
-          <tr>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
-              </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
-              </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
-              </div>
-            </div>
-            <div class="card2 loading2">
-              <div class="image2"></div>
-              <div class="content2">
-                <h4></h4>
-                <div class="description2"></div>
-              </div>
-            </div>
+            </td>
           </tr>
         </table>
       </div>
@@ -532,7 +443,7 @@ export default {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12);
   /* float: left; */
 }
-.card2 {
+.cardH {
   margin: 10px;
   height: 175px;
   width: 210px;
@@ -545,7 +456,7 @@ export default {
 .image {
   height: 75px;
 }
-.image2 {
+.imageH {
   height: 105px;
 }
 
@@ -555,7 +466,7 @@ export default {
   height: inherit;
   object-fit: cover;
 }
-.image2 img {
+.imageH img {
   display: block;
   width: 100%;
   height: inherit;
@@ -565,7 +476,7 @@ export default {
 .content {
   padding: 0.3rem 1.8rem;
 }
-.content2 {
+.contentH {
   padding: 0.7rem 1.8rem;
 }
 h4 {
@@ -579,13 +490,15 @@ h4 {
   line-height: 1.4rem;
 }
 
-.description2 {
+.descriptionH {
   font-size: 1rem;
   line-height: 1.4rem;
 }
 
 .loading .image,
 .loading h4,
+.loading .tubiaoS,
+.loading .tubiaoK,
 .loading .description {
   background-color: var(--loading-grey);
   background: linear-gradient(
@@ -599,9 +512,9 @@ h4 {
   background-position-x: 180%;
   animation: 1s loading ease-in-out infinite;
 }
-.loading2 .image2,
-.loading2 h4,
-.loading2 .description2 {
+.loadingH .imageH,
+.loadingH h4,
+.loadingH .descriptionH {
   background-color: var(--loading-grey);
   background: linear-gradient(
       100deg,
@@ -620,7 +533,7 @@ h4 {
     background-position-x: -20%;
   }
 }
-@keyframes loading2 {
+@keyframes loadingH {
   to {
     background-position-x: -20%;
   }
@@ -631,7 +544,7 @@ h4 {
   border-radius: 4px;
   animation-delay: 0.05s;
 }
-.loading2 h4 {
+.loadingH h4 {
   min-height: 1rem;
   border-radius: 4px;
   animation-delay: 0.05s;
@@ -642,7 +555,7 @@ h4 {
   border-radius: 4px;
   animation-delay: 0.06s;
 }
-.loading2 .description2 {
+.loadingH .descriptionH {
   min-height: 2rem;
   border-radius: 4px;
   animation-delay: 0.06s;
@@ -703,13 +616,13 @@ h4 {
   font-size: 25px;
   margin-left: 55px;
 }
-.huanyihuan {
+.huanyihuan2 {
   float: right;
   font-family: cursive;
   /* font-size: 25px; */
   margin-right: 85px;
 }
-.fankua {
+.fankua2 {
   font-family: cursive;
   background-color: #fff;
   border-radius: 15px;
@@ -724,7 +637,9 @@ h4 {
   width: 345px;
   height: 40px;
   border-radius: 45px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12);
 }
 .shuaXin {
   float: right;
@@ -736,7 +651,7 @@ h4 {
   text-align: center;
   padding-top: 10px;
   border-radius: 45px;
-  cursor:default;
+  cursor: default;
 }
 .tubiaoS {
   height: 32px;

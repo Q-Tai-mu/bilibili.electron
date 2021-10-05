@@ -3,7 +3,7 @@
  * @Description: 
  * @Author: MArio
  * @Date: 2021-09-29 15:03:04
- * @LastEditTime: 2021-10-04 10:48:24
+ * @LastEditTime: 2021-10-05 16:45:21
  * @LastEditors: MArio
 -->
 
@@ -15,7 +15,9 @@
         <TitleBlock call1="off" call2="off"/>
       </div>
         <!-- 八个选项卡 -->
-        <Recommendation/>
+        <Recommendation v-if="false"/>
+        <RankingList v-if="false"/>
+        <Fanju v-if="true"/>
     </section>
   </div>
 </template>
@@ -24,9 +26,11 @@
 import TitleBlock from "../components/TitleBlock.vue";
 import Aside from "../components/Aside.vue";
 import Recommendation from "../components/Recommendation.vue";
+import RankingList from "../components/RankingList.vue";
+import Fanju from "../components/Fanju.vue";
 export default {
   name: "appMain",
-  components: { TitleBlock,Aside,Recommendation },
+  components: { TitleBlock,Aside,Recommendation,RankingList,Fanju },
 };
 </script>
 
