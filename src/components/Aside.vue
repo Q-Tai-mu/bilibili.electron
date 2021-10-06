@@ -1,6 +1,6 @@
 <template>
   <div class="aside">
-    <div class="sidebar close">
+    <div class="sidebar close borders">
       <div class="logo-details">
         <img
           src="../assets/Logo/Square44x44Logo.altform-lightunplated_targetsize-48.png"
@@ -192,6 +192,7 @@ export default {
   justify-content: center;
   -webkit-app-region: drag;
   background-color: #fff;
+
 }
 li {
   -webkit-app-region: no-drag;
@@ -203,5 +204,11 @@ li {
 }
 .bframe {
   border-left: none;
+}
+.borders {
+    border-left: 1px solid #acacac;
+    border-bottom: 1px solid #acacac;
+    border-top: 1px solid #acacac;
+
 }
 </style>
