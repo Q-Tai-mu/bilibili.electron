@@ -3,7 +3,7 @@
  * @Description: 
  * @Author: MArio
  * @Date: 2021-10-05 07:55:43
- * @LastEditTime: 2021-10-05 16:36:04
+ * @LastEditTime: 2021-10-06 21:09:23
  * @LastEditors: MArio
 -->
 <template>
@@ -625,9 +625,9 @@ h4 {
   background: #f1f6fa;
 }
 .paiBonBan {
-  width: 90%;
+  width: 91%;
   height: 74vh;
-  margin-left: 55px;
+  margin-left: 45px;
 }
 
 .scro {

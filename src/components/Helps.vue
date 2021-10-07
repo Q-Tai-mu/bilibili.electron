@@ -3,7 +3,7 @@
  * @Description: 
  * @Author: MArio
  * @Date: 2021-10-06 15:16:15
- * @LastEditTime: 2021-10-06 16:29:05
+ * @LastEditTime: 2021-10-06 17:43:55
  * @LastEditors: MArio
 -->
 <template>
@@ -121,10 +121,13 @@
             </tr>
           </table>
         </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div class="DaiSan">自愿打赏</div>
+        <div style=" float: left; margin-top: 5px;">
+          <img class="imagesC" src="../assets/ZFB.jpg" />
+        </div>
+        <div style="float: right; margin-top: 5px;">
+          <img  class="imagesC"  src="../assets/WX.jpg" />
+        </div>
       </div>
     </div>
   </div>
@@ -153,6 +156,7 @@ export default {
 #helps {
   height: 100%;
   width: 100%;
+
 }
 .Searchbox {
   height: 50px;
@@ -246,6 +250,13 @@ export default {
   text-align: left;
   margin-top: 35px;
 }
+.DaiSan {
+    font-size: 20px;
+  font-family: cursive;
+  text-align: left;
+  margin-top: 25px;
+  margin-bottom:5px;
+}
 .tableKuai {
   width: 100%;
   font-family: cursive;
@@ -261,5 +272,10 @@ export default {
   padding-top: 10px;
   border-radius: 45px;
   cursor: default;
+}
+.imagesC {
+    width: 150px;
+    height: 200px;
+    border-radius: 6px;
 }
 </style>

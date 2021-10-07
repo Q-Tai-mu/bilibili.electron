@@ -3,7 +3,7 @@
  * @Description: 
  * @Author: MArio
  * @Date: 2021-09-29 15:03:04
- * @LastEditTime: 2021-10-06 15:17:05
+ * @LastEditTime: 2021-10-07 08:22:15
  * @LastEditors: MArio
 -->
 
@@ -19,7 +19,9 @@
       <RankingList v-if="false" />
       <Fanju v-if="false" />
       <Dsynamic v-if="false" />
-      <Helps/>
+      <Helps v-if="false"/>
+      <MyNews v-if="false"/>
+      <UpHomePage/>
     </section>
   </div>
 </template>
@@ -33,6 +35,8 @@ import RankingList from "../components/RankingList.vue";
 import Fanju from "../components/Fanju.vue";
 import Dsynamic from "../components/Dsynamic.vue";
 import Helps  from "../components/Helps.vue";
+import MyNews from "../components/MyNews.vue";
+import UpHomePage from "../components/UpHomePage.vue";
 
 export default {
   name: "appMain",
@@ -43,7 +47,9 @@ export default {
     RankingList,
     Fanju,
     Dsynamic,
-    Helps
+    Helps,
+    MyNews,
+    UpHomePage
   },
 };
 </script>
