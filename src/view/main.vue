@@ -3,7 +3,7 @@
  * @Description: 
  * @Author: MArio
  * @Date: 2021-09-29 15:03:04
- * @LastEditTime: 2021-10-07 08:22:15
+ * @LastEditTime: 2021-10-07 22:19:58
  * @LastEditors: MArio
 -->
 
@@ -21,7 +21,8 @@
       <Dsynamic v-if="false" />
       <Helps v-if="false"/>
       <MyNews v-if="false"/>
-      <UpHomePage/>
+      <UpHomePage v-if="false"/>
+      <PlayPage/>
     </section>
   </div>
 </template>
@@ -37,6 +38,7 @@ import Dsynamic from "../components/Dsynamic.vue";
 import Helps  from "../components/Helps.vue";
 import MyNews from "../components/MyNews.vue";
 import UpHomePage from "../components/UpHomePage.vue";
+import PlayPage from "../components/PlayPage.vue";
 
 export default {
   name: "appMain",
@@ -49,7 +51,8 @@ export default {
     Dsynamic,
     Helps,
     MyNews,
-    UpHomePage
+    UpHomePage,
+    PlayPage
   },
 };
 </script>
