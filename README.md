@@ -45,3 +45,15 @@
 ## 🧩 截图
 
 ![截图](./src/assets/liliMain.png)
+
+![截图](./src/assets/liliUpHome.png)
+
+![截图](./src/assets/liliT.png)
+
+![截图](./src/assets/liliUpPlay.png)
+
+![截图](./src/assets/IMG_0739.PNG)
+
+![截图](./src/assets/IMG_0740.PNG)
+
+![截图](./src/assets/IMG_0742.PNG)
