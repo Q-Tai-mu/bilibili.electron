@@ -3,7 +3,7 @@
  * @Description: 
  * @Author: MArio
  * @Date: 2021-10-07 22:18:26
- * @LastEditTime: 2021-10-09 14:10:32
+ * @LastEditTime: 2021-10-14 15:31:19
  * @LastEditors: MArio
 -->
 <template>
@@ -39,7 +39,10 @@
               <div class="playPageHomeFourCombosTo1">投</div>
               <div class="playPageHomeFourCombosTo1">收</div>
               <div class="playPageHomeFourCombosTo1">分</div>
-              <div class="playPageHomeFourCombosTo2">广告法，下载防诈骗app</div>
+              <div class="playPageHomeFourCombosTo2" @click="playUp">
+                下载视频
+              </div>
+              <div class="playPageHomeFourCombosTo2">堤防短信诈骗</div>
             </div>
             <div class="playPageHomeVideoDetails scro">
               习惯独立又不善言辞的女主在面对生活的艰难时，做不到开口向别人寻求帮助，她选择一个人面对所有挑战。
@@ -62,7 +65,7 @@
                   各位点个关注再走呗 商务合
                 </div>
                 <div class="playPageHomeAvatarRightBlockOn3">
-                  <div class="palyPageHomeChargeTheBattery">为TA充电</div>
+                  <!-- <div class="palyPageHomeChargeTheBattery">为TA充电</div> -->
                   <div class="palyPageHomeAmountOfAttention">关注 316.4万</div>
                 </div>
               </div>
@@ -319,8 +322,28 @@
 </template>
 
 <script>
+const { net } = require("electron").remote;
 export default {
   name: "playPage",
+  methods: {
+    playUp() {
+      const request = net.request(
+        "https://api.bilibili.com/x/space/acc/info?mid=353116&jsonp=jsonp"
+      );
+      request.on("response", (response) => {
+        console.log(`**statusCode:${response.statusCode}`);
+        console.log(`**header:${JSON.stringify(response.headers)}`);
+        response.on("data", (chunk) => {
+          console.log("接收到数据：", chunk.toString());
+        });
+        response.on("end", () => {
+          console.log("数据接收完成");
+        });
+      });
+      //结束请求，不然没有响应数据
+      request.end();
+    },
+  },
 };
 </script>
 
@@ -352,11 +375,11 @@ export default {
   width: 96%;
   height: 22%;
   padding-bottom: 20px;
-  background-color: #fff;
+  /* background-color: #fff; */
   border-radius: 6px;
   /* overflow: hidden; */
   border: 1px solid #f4f4f4;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12);
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12); */
   overflow-y: auto;
   text-align: center;
   font-size: 14px;
@@ -366,10 +389,10 @@ export default {
 .playPageHomeRelatedComments {
   width: 20%;
   height: 100%;
-  background-color: #fff;
+  /* background-color: #fff; */
   border-radius: 6px;
   overflow: hidden;
-  border: 1px solid #f4f4f4;
+  /* border: 1px solid #f4f4f4; */
   font-size: 11px;
   padding: 3px;
   padding-top: 8px;
@@ -387,10 +410,10 @@ export default {
 .playPageHomeAssociatedVideo {
   width: 20%;
   height: 100%;
-  background-color: #fc9eb9;
+  /* background-color: #fc9eb9; */
   border-radius: 6px;
   overflow: hidden;
-  border: 1px solid #f4f4f4;
+  /* border: 1px solid #f4f4f4; */
   font-size: 11px;
   padding: 3px;
   padding-top: 8px;
@@ -398,13 +421,13 @@ export default {
   cursor: pointer;
   position: relative;
   transition: 0.6s linear;
-  color: rgb(255, 255, 255);
+  /* color: rgb(255, 255, 255); */
   margin: 0.5%;
 }
 .playPageHomeAssociatedVideo:hover {
   /* color: rgb(255, 255, 255); */
-  /* background-color: #00a1d6; */
-  border: 1px solid #00a1d6;
+  background-color: #fc9eb9;
+  /* border: 1px solid #00a1d6; */
   transition: 0.6s linear;
 }
 
@@ -415,8 +438,8 @@ export default {
   border-radius: 6px;
   overflow: hidden;
   border: 1px solid #f4f4f4;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12);
-  margin-bottom: 5px;
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12); */
+  margin-bottom: 3px;
 }
 .playPageHomeplayVideoFooter {
   width: 100%;
@@ -438,24 +461,25 @@ export default {
 }
 .playPageHomeFourCombosTo2 {
   float: right;
-  width: 200px;
+  width: 110px;
   height: 30px;
-  background-color: #fc9eb9;
+  background-color: #fff;
   border-radius: 5px;
   overflow: hidden;
   border: 1px solid #ededed;
-  box-shadow: 0px 4px 6px rgb(0 0 0 / 12%);
-  margin-top: 15px;
+  /* box-shadow: 0px 4px 6px rgb(0 0 0 / 12%); */
+  margin-top: 8px;
   padding-top: 2px;
-  color: rgb(255, 255, 255);
+  /* color: rgb(255, 255, 255); */
   cursor: pointer;
   /* margin-right: 20px; */
+  margin-left: 10px;
 }
 .playPageHomeFourCombosTo2:hover {
   color: rgb(255, 255, 255);
   background-color: #fc9eb9;
   transition: 0.6s linear;
-  border: 1px solid #00a1d6;
+  border: 1px solid #ededed;
 }
 .playPageHomeFourCombosTo1 {
   float: left;
@@ -465,8 +489,8 @@ export default {
   border-radius: 35px;
   overflow: hidden;
   border: 1px solid #ededed;
-  box-shadow: 0px 4px 6px rgb(0 0 0 / 12%);
-  margin-top: 15px;
+  /* box-shadow: 0px 4px 6px rgb(0 0 0 / 12%); */
+  margin-top: 8px;
   margin-left: 5px;
   padding-top: 0.7%;
   text-align: center;
@@ -547,7 +571,7 @@ export default {
   border-radius: 6px;
   overflow: hidden;
   border: 1px solid #f4f4f4;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12);
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12); */
   margin-bottom: 10px;
 }
 .playPageHomeRecommendedVideo {
@@ -560,7 +584,7 @@ export default {
   background-color: #00a1d6;
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12);
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12); */
   border: 1px solid #e5f9fb;
   color: #fff;
   margin-top: 1px;
@@ -597,7 +621,7 @@ export default {
   border-radius: 6px;
   overflow: hidden;
   color: #fff;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12);
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12); */
   float: left;
   padding-top: 2px;
   font-size: 15px;
@@ -609,7 +633,7 @@ export default {
   border-radius: 6px;
   overflow: hidden;
   color: #fff;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12);
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12); */
   height: 25px;
   font-size: 15px;
   padding-top: 2px;
@@ -624,7 +648,7 @@ export default {
   border-radius: 6px;
   overflow: hidden;
   color: #fff;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12);
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12); */
   float: left;
   padding-top: 2px;
   font-size: 15px;
@@ -648,10 +672,10 @@ export default {
   width: 100%;
   height: 100px;
   background-color: #fff;
-  border-radius: 6px;
+  border-radius: 3px;
   overflow: hidden;
-  box-shadow: 0px 4px 6px rgb(0 0 0 / 12%);
-  margin-bottom: 8px;
+  /* box-shadow: 0px 4px 6px rgb(0 0 0 / 12%); */
+  margin-bottom: 4px;
   padding-top: 4%;
   padding-left: 3%;
 }
